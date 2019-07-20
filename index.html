@@ -178,19 +178,49 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
+          <a href="/首页" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
             
             Home
           </a>
         </li>
       
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
+        <li class="menu-item menu-item-about">
+          <a href="/关于" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/标签" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/分类" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/归档" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
             
             Archives
           </a>
@@ -322,9 +352,9 @@
       
         
           
-            <h1 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h1><p> 在远程调用中，需要把参数和返回值通过网络传输，这个使用就要用到序列化将对象转变成字节流，从一端到另一端之后再反序列化回来变成对象。</p>
-<p>序列化（Serialization）也称为编码（Encode），它将对象序列化为字节数组，用于网络传输、数据持久化等用途；</p>
-<p>反序列化（Deserialization）也称为解码（Decode），负责从网络、磁盘中读取的字节数组还原成原始对象（通常是原始对象的副本）。</p>
+            <h1 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h1><p> 在远程调用中，需要把参数和返回值通过网络传输，这时就要用到序列化将对象转变成字节流，从一端到另一端之后再反序列化回来变成对象，因此，我们需要先了解一下序列化和反序列化。</p>
+<p><strong>序列化(Serialization)</strong>：也称为编码(Encode)，将对象序列化为字节数组，用于网络传输、数据持久化等用途；</p>
+<p><strong>反序列化(Deserialization)</strong>：也称为解码(Decode)，负责从网络、磁盘中读取的字节数组还原成原始对象（通常是原始对象的副本）。</p>
 <h2 id="Java-默认序列化机制"><a href="#Java-默认序列化机制" class="headerlink" title="Java 默认序列化机制"></a>Java 默认序列化机制</h2><p>Java 提供默认的序列化机制，需要序列化的对象只需要实现 java.io.Serializable 接口并生成序列化 ID，这个类就可以通过 java.io.ObjectInput 和 java.io.ObjectOutput 序列化和反序列。</p>
 <p>也可以通过 Externalizable 接口实现序列化和反序列化</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Externalizable</span> <span class="keyword">extends</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">writeExternal</span><span class="params">(ObjectOutput out)</span> <span class="keyword">throws</span> IOException</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">readExternal</span><span class="params">(ObjectInput in)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -560,7 +590,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+                <a href="/归档">
               
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
