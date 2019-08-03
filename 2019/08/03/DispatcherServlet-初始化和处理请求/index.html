@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="SpringMVC,">
 
 
 
@@ -81,13 +81,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="DispatcherServlet初始化和处理请求DispatcherServlet 是前端控制器设计模式的实现，提供 Spring Web MVC 集中访问点，而且负责职责的分派，而且与 Spring IoC 容器无缝集成。  （1）DispatcherServlet 实现了 HttpServlet 接口，因此，DispatcherServlet 是一个 Servlet，那么它就遵循 Servl">
+<meta name="keywords" content="SpringMVC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DispatcherServlet 初始化和处理请求">
+<meta property="og:url" content="http://yoursite.com/2019/08/03/DispatcherServlet-初始化和处理请求/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="DispatcherServlet初始化和处理请求DispatcherServlet 是前端控制器设计模式的实现，提供 Spring Web MVC 集中访问点，而且负责职责的分派，而且与 Spring IoC 容器无缝集成。  （1）DispatcherServlet 实现了 HttpServlet 接口，因此，DispatcherServlet 是一个 Servlet，那么它就遵循 Servl">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/70dc5b5cgy1g4xfga5wx8j20pp0gbaae.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/70dc5b5cgy1g5ce26fs38j20ox0nejx4.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/70dc5b5cgy1g5mkycs1akj20um0hzjs3.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/70dc5b5cgy1g4ybsyz3scj20pp0gbaae.jpg">
+<meta property="og:updated_time" content="2019-08-03T12:37:13.683Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
+<meta name="twitter:title" content="DispatcherServlet 初始化和处理请求">
+<meta name="twitter:description" content="DispatcherServlet初始化和处理请求DispatcherServlet 是前端控制器设计模式的实现，提供 Spring Web MVC 集中访问点，而且负责职责的分派，而且与 Spring IoC 容器无缝集成。  （1）DispatcherServlet 实现了 HttpServlet 接口，因此，DispatcherServlet 是一个 Servlet，那么它就遵循 Servl">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/70dc5b5cgy1g4xfga5wx8j20pp0gbaae.jpg">
 
 
 
@@ -117,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/03/DispatcherServlet-初始化和处理请求/">
 
 
 
 
 
-  <title>个人博客</title>
+  <title>DispatcherServlet 初始化和处理请求 | 个人博客</title>
   
 
 
@@ -142,8 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -246,9 +255,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -278,9 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/03/DispatcherServlet-初始化和处理请求/" itemprop="url">DispatcherServlet 初始化和处理请求</a></h1>
+          <h1 class="post-title" itemprop="name headline">DispatcherServlet 初始化和处理请求</h1>
         
 
         <div class="post-meta">
@@ -352,9 +359,7 @@
       
 
       
-        
-          
-            <h1 id="DispatcherServlet初始化和处理请求"><a href="#DispatcherServlet初始化和处理请求" class="headerlink" title="DispatcherServlet初始化和处理请求"></a>DispatcherServlet初始化和处理请求</h1><p>DispatcherServlet 是前端控制器设计模式的实现，提供 Spring Web MVC 集中访问点，而且负责职责的分派，而且与 Spring IoC 容器无缝集成。</p>
+        <h1 id="DispatcherServlet初始化和处理请求"><a href="#DispatcherServlet初始化和处理请求" class="headerlink" title="DispatcherServlet初始化和处理请求"></a>DispatcherServlet初始化和处理请求</h1><p>DispatcherServlet 是前端控制器设计模式的实现，提供 Spring Web MVC 集中访问点，而且负责职责的分派，而且与 Spring IoC 容器无缝集成。</p>
 <p><img src="https://ws1.sinaimg.cn/large/70dc5b5cgy1g4xfga5wx8j20pp0gbaae.jpg" alt></p>
 <p>（1）DispatcherServlet 实现了 HttpServlet 接口，因此，DispatcherServlet 是一个 Servlet，那么它就遵循 Servlet 的生命周期；</p>
 <p>（2）DispatcherServlet 还实现 Aware接口，Spring 会自动注入 Aware 接口方法里的对象；但是 DispatcherServlet 对象由 Web 容器来管理，而不是由 Spring IOC 管理，因此，根本就不可能自动注入Environment 和 ApplicationContext 对象；这里的 ApplicationContextAware 和 EnvironmentAware 实际是作为普通接口使用，需要手动编程调用接口方法，如果 ServletContext.addServlet 方法注入 Servlet，如果注册的是 DispatcherServlet，那么就可以在 FrameworkServlet 及其子类通过构造方法时传入已经创建好的 WebApplicationContext；默认使用  WebApplicationContext 作为上下文，Spring默认配置文件为 “/WEBINF/[servlet名字]-servlet.xml“ </p>
@@ -747,8 +752,6 @@
             document.body.appendChild(img);
           });
       </script>
-          
-        
       
     </div>
     
@@ -763,373 +766,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/Java序列化/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshangan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/20/Java序列化/" itemprop="url">Java序列化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-20T17:10:35+08:00">
-                2019-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/SpringMVC/" rel="tag"># SpringMVC</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h1><p> 在远程调用中，需要把参数和返回值通过网络传输，这时就要用到序列化将对象转变成字节流，从一端到另一端之后再反序列化回来变成对象，因此，我们需要先了解一下序列化和反序列化。</p>
-<p><strong>序列化(Serialization)</strong>：也称为编码(Encode)，将对象序列化为字节数组，用于网络传输、数据持久化等用途；</p>
-<p><strong>反序列化(Deserialization)</strong>：也称为解码(Decode)，负责从网络、磁盘中读取的字节数组还原成原始对象（通常是原始对象的副本）。</p>
-<h2 id="Java-默认序列化机制"><a href="#Java-默认序列化机制" class="headerlink" title="Java 默认序列化机制"></a>Java 默认序列化机制</h2><p>Java 提供默认的序列化机制，需要序列化的对象只需要实现 java.io.Serializable 接口并生成序列化 ID，这个类就可以通过 java.io.ObjectInput 和 java.io.ObjectOutput 序列化和反序列。也可以通过 Externalizable 接口实现序列化和反序列化</p>
-<p>一旦某个类实现了 Serializable 接口，那么这个类就是可序列化的，可以通过 ObjectOutputStream 来序列化对象：</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Person person = <span class="keyword">new</span> Person();</span><br><span class="line">ObjectOutputStream outputStream = </span><br><span class="line">    <span class="keyword">new</span> ObjectOutputStream(<span class="keyword">new</span> FileOutputStream(<span class="string">"object.txt"</span>));</span><br><span class="line"></span><br><span class="line">outputStream.writeObject(object);</span><br></pre></td></tr></tbody></table></figure>
-
-<p>如果希望从二进制流中恢复对象，则需要通过 ObjectInputStream 来反序列化</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ObjectInputStream inputStream =</span><br><span class="line">    <span class="keyword">new</span> ObjectInputStream(<span class="keyword">new</span> FileInputStream(<span class="string">"object.txt"</span>));</span><br><span class="line"></span><br><span class="line">Person person = (Person)inputStream.readObject();</span><br></pre></td></tr></tbody></table></figure>
-
-<p><font color="red">如果使用序列化机制向文件写入多个 Java 对象，在使用反序列化机制恢复对象时必须按照实际写入的顺序读取。</font></p>
-<p>当一个可序列化类由多个父类时，这些父类要么有无参构造方法，要么也是可序列化的，否则就会抛出 InvalidClassException，如果这个父类时不可序列化的，只是带无参构造方法，则该父类中定义的成员变量值不会序列化到二进制流中。</p>
-<h3 id="Java-序列化算法"><a href="#Java-序列化算法" class="headerlink" title="Java 序列化算法"></a>Java 序列化算法</h3><p>Java 序列化采用一种特殊的算法，具有如下特点：</p>
-<ul>
-<li>所有保存到磁盘的对象都要一个序列化编号；</li>
-<li>当程序视图序列化一个对象时，程序首先检查该对象是否已经序列化过，只有该对象从未被序列化，系统才会将该对象转换为字节序列输出；</li>
-<li>如果某个对象已经序列化过，程序将直接输出一个序列化编号，而不是再次重新序列化该对象；</li>
-</ul>
-<p>递归序列化：</p>
-<p>当对某个对象进行序列化，系统会自动把该对象的所有实例变量进行序列化，如果某个实例变量引用另外一个对象，则被引用的对象也会被序列化，如果被引用的对象实例变量也引用了其他对象，则被引用的对象也会被序列化，这种情况就称为递归序列化。</p>
-<h3 id="transient-关键字"><a href="#transient-关键字" class="headerlink" title="transient 关键字"></a>transient 关键字</h3><p>在某些特殊场景，比如在一个类中包含的某些实例变量是敏感信息，如银行账户信息等，那么可以在该实例变量前增加 transient 关键字，那么 Java 序列化机制就会在序列化时不会序列化该变量。</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>{</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">transient</span> String phone;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age, String phone)</span> </span>{</span><br><span class="line">        System.out.println(<span class="string">"Person 构造方法"</span>);</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">        <span class="keyword">this</span>.phone = phone;</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 省略getter/setter方法</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{</span><br><span class="line">    <span class="keyword">try</span> (ObjectOutputStream oos = <span class="keyword">new</span> ObjectOutputStream(</span><br><span class="line">        <span class="keyword">new</span> FileOutputStream(<span class="string">"E:/download/transient.txt"</span>));</span><br><span class="line">         ObjectInputStream ois = <span class="keyword">new</span> ObjectInputStream(</span><br><span class="line">             <span class="keyword">new</span> FileInputStream(<span class="string">"E:/download/transient.txt"</span>))) {</span><br><span class="line">        Person person = <span class="keyword">new</span> Person(<span class="string">"xiaoxiao"</span>, <span class="number">20</span>, <span class="string">"18200594087"</span>);</span><br><span class="line">        oos.writeObject(person);</span><br><span class="line">        person = (Person)ois.readObject();</span><br><span class="line">        <span class="comment">// 输出null</span></span><br><span class="line">        System.out.println(person.getPhone());</span><br><span class="line">    } <span class="keyword">catch</span> (Exception e) {</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    } </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p><strong>需要注意的是</strong>：transient 关键字只能修饰实例变量，不可修饰 Java 程序中的其他部分；</p>
-<h3 id="自定义序列化机制"><a href="#自定义序列化机制" class="headerlink" title="自定义序列化机制"></a>自定义序列化机制</h3><p>transient 关键字修饰的实例变量被完全隔离在序列化机制之外，这就导致在反序列化恢复 Java 对象时无法获取该实例变量值。</p>
-<p>Java 提供了另外一种自定义序列化机制，通过重写如下方法：</p>
-<ul>
-<li>private void writeObject(ObjectOutputStream out) throws IOException</li>
-<li>private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException</li>
-<li>private void readObjectNoData() throws ObjectStreamException</li>
-</ul>
-<p>通过重写上面三个方法，可以让程序控制如何序列化实例变量，甚至可以达到 transient 关键字不序列化某个字段的效果。</p>
-<p>默认情况下，使用 ObjectOutputStream.defaultWriteObject() 方法来保存各个对象的实例变量，从而实现序列化 Java 对象状态的目的，writeObject 方法负责写入特定类的实例状态，通过重写 writeObject 方法可以实现序列化机制的控制；</p>
-<p>默认情况下，使用ObjectInputStream.defaultReadObject() 方法从二进制流中读取对象的实例变量，从而实现反序列化机制；readObject 方法负责从流中读取并恢复对象的实例变量，通过重写 readObject 方法来恢复对象的非 transient 实例变量。</p>
-<p>当序列化流不完整时，readObjectNoData 方法可以正确地初始化反序列化的对象。</p>
-<h2 id="Externalizable-接口"><a href="#Externalizable-接口" class="headerlink" title="Externalizable 接口"></a>Externalizable 接口</h2><p>除了实现 Serializable 接口外，还可以实现 Externalizable 接口来支持序列化和反序列化。</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Externalizable</span> <span class="keyword">extends</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span> </span>{</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 实现序列化的方法，调用ObjectOutput.writeObject</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">writeExternal</span><span class="params">(ObjectOutput out)</span> <span class="keyword">throws</span> IOException</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 实现反序列化的方法，调用ObjectInput.readObject方法</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">readExternal</span><span class="params">(ObjectInput in)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="序列化总结："><a href="#序列化总结：" class="headerlink" title="序列化总结："></a>序列化总结：</h2><ul>
-<li>对象名、实例变量都会被序列化</li>
-<li>方法、类变量、transient 变量都不会被序列化</li>
-<li>实现 Serializable 接口的类如果想要某个实例变量不被序列化，那么可以使用 transient 关键字修饰该变量；</li>
-</ul>
-<h2 id="Hessian序列化机制"><a href="#Hessian序列化机制" class="headerlink" title="Hessian序列化机制"></a>Hessian序列化机制</h2><p>Hessian 序列化比 Java 序列化高效很多，而且生成的字节流也要短很多。但相对来说没有 Java 序列化可靠，而且也不如 Java序列化支持的全面，主要在于他们的实现方式不同：</p>
-<ul>
-<li>Java 序列化会把要序列化的对象类的元数据和业务数据全部序列化为字节流，而且是把整个继承关系上的东西全部序列化了。它序列化出来的字节流是对那个对象结构到内容的完全描述，包含所有的信息，因此效率较低而且字节流比较大。但是由于确实是序列化了所有内容，所以可以说什么都可以传输，因此也更可用和可靠。</li>
-<li><code>Hessian</code>序列化，它的实现机制是着重于数据，附带简单的类型信息的方法。就像<code>Integer a = 1</code>，<code>Hessian</code>会序列化成<code>I 1</code>这样的流，<code>I</code>表示<code>int or Integer</code>，<code>1</code>就是数据内容。而对于复杂对象，通过<code>Java</code>的反射机制，<code>Hessian</code>把对象所有的属性当成一个<code>Map</code>来序列化，包含了基本的类型描述和数据内容。而在序列化过程中，如果一个对象之前出现过，<code>Hessian</code>会直接插入一个<code>R index</code>这样的块来表示一个引用位置，从而省去再次序列化和反序列化的时间。</li>
-</ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zuoshangan">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/20/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-20T15:50:55+08:00">
-                2019-07-20
-              </time>
+              <a href="/2019/07/20/Java序列化/" rel="next" title="Java序列化">
+                <i class="fa fa-chevron-left"></i> Java序列化
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1139,10 +805,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1150,6 +817,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1170,8 +841,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1238,6 +918,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DispatcherServlet初始化和处理请求"><span class="nav-number">1.</span> <span class="nav-text">DispatcherServlet初始化和处理请求</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DispatcherServlet中使用的特殊Bean"><span class="nav-number">1.1.</span> <span class="nav-text">DispatcherServlet中使用的特殊Bean</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DispatcherServlet-初始化"><span class="nav-number">2.</span> <span class="nav-text">DispatcherServlet 初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基于-xml-配置文件整合"><span class="nav-number">2.1.</span> <span class="nav-text">基于 xml 配置文件整合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#默认策略组件"><span class="nav-number">2.2.</span> <span class="nav-text">默认策略组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取默认的策略组件"><span class="nav-number">2.3.</span> <span class="nav-text">获取默认的策略组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HttpServletBean-init"><span class="nav-number">2.4.</span> <span class="nav-text">HttpServletBean.init</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FrameworkServlet-initServletBean"><span class="nav-number">2.5.</span> <span class="nav-text">FrameworkServlet.initServletBean</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化-WebApplicationContext"><span class="nav-number">2.5.1.</span> <span class="nav-text">初始化 WebApplicationContext</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流程"><span class="nav-number">2.5.2.</span> <span class="nav-text">流程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DispatcherServlet初始化策略类"><span class="nav-number">2.6.</span> <span class="nav-text">DispatcherServlet初始化策略类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化MultipartResolver"><span class="nav-number">2.6.1.</span> <span class="nav-text">初始化MultipartResolver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化LocaleResolver"><span class="nav-number">2.6.2.</span> <span class="nav-text">初始化LocaleResolver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化ThemeResolver"><span class="nav-number">2.6.3.</span> <span class="nav-text">初始化ThemeResolver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化HandlerMapping"><span class="nav-number">2.6.4.</span> <span class="nav-text">初始化HandlerMapping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化HandlerAdapter"><span class="nav-number">2.6.5.</span> <span class="nav-text">初始化HandlerAdapter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化HandlerExceptionResolver"><span class="nav-number">2.6.6.</span> <span class="nav-text">初始化HandlerExceptionResolver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化RequestToViewNameTranslator"><span class="nav-number">2.6.7.</span> <span class="nav-text">初始化RequestToViewNameTranslator</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化ViewResolver"><span class="nav-number">2.6.8.</span> <span class="nav-text">初始化ViewResolver</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化FlashMapManager"><span class="nav-number">2.6.9.</span> <span class="nav-text">初始化FlashMapManager</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化流程"><span class="nav-number">2.7.</span> <span class="nav-text">初始化流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DispactherServlet处理请求"><span class="nav-number">3.</span> <span class="nav-text">DispactherServlet处理请求</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#FrameworkServlet-service-方法"><span class="nav-number">3.1.</span> <span class="nav-text">FrameworkServlet.service 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FrameworkServlet-processRequest"><span class="nav-number">3.2.</span> <span class="nav-text">FrameworkServlet.processRequest</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LocalContext"><span class="nav-number">3.2.1.</span> <span class="nav-text">LocalContext</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RequestAttributes"><span class="nav-number">3.2.2.</span> <span class="nav-text">RequestAttributes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DispatcherServlet-doService方法"><span class="nav-number">3.3.</span> <span class="nav-text">DispatcherServlet.doService方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DispatcherServlet-doDispatch方法"><span class="nav-number">3.4.</span> <span class="nav-text">DispatcherServlet.doDispatch方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#检查上传请求"><span class="nav-number">3.4.1.</span> <span class="nav-text">检查上传请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据request找到HandlerMapping"><span class="nav-number">3.4.2.</span> <span class="nav-text">根据request找到HandlerMapping</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将handler包装为HandlerAdapter"><span class="nav-number">3.4.3.</span> <span class="nav-text">将handler包装为HandlerAdapter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理-GET-POST-方法的-Last-Modification"><span class="nav-number">3.4.4.</span> <span class="nav-text">处理 GET/POST 方法的 Last-Modification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-HandlerExecutionChain-preHandler方法"><span class="nav-number">3.4.5.</span> <span class="nav-text">执行 HandlerExecutionChain#preHandler方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HandlerAdapter调用handler的功能处理方法"><span class="nav-number">3.4.6.</span> <span class="nav-text">HandlerAdapter调用handler的功能处理方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步执行"><span class="nav-number">3.4.7.</span> <span class="nav-text">异步执行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置默认视图名"><span class="nav-number">3.4.8.</span> <span class="nav-text">设置默认视图名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-HandlerExecutionChain-postHandler方法"><span class="nav-number">3.4.9.</span> <span class="nav-text">执行 HandlerExecutionChain#postHandler方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行-processDispatchResult-方法"><span class="nav-number">3.4.10.</span> <span class="nav-text">执行 processDispatchResult 方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#渲染视图"><span class="nav-number">3.4.10.1.</span> <span class="nav-text">渲染视图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#触发请求处理完成通知"><span class="nav-number">3.4.10.2.</span> <span class="nav-text">触发请求处理完成通知</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理请求总体流程"><span class="nav-number">3.5.</span> <span class="nav-text">处理请求总体流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HttpServletBean"><span class="nav-number">4.1.</span> <span class="nav-text">HttpServletBean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FrameworkServlet："><span class="nav-number">4.2.</span> <span class="nav-text">FrameworkServlet：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始化"><span class="nav-number">4.2.1.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理请求"><span class="nav-number">4.2.2.</span> <span class="nav-text">处理请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DispatcherServlet"><span class="nav-number">4.3.</span> <span class="nav-text">DispatcherServlet</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1378,6 +1074,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
